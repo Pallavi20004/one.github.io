@@ -1,0 +1,295 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #007BFF;
+    position: relative;
+}
+
+.toggle {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hide toggle button initially */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.nav-link, .login-btn {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.login-btn {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+.nav-link.active, .login-btn:hover {
+    background-color: #0056b3;
+}
+
+section {
+    padding: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea, form select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Card Section Styles */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.hidden-content {
+    display: none;
+}
+
+.form-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 8px;
+    margin-bottom: 100px;
+
+}
+    
+
+.compact-form {
+    max-width: 100%; /* Full width for the form */
+    margin: 0 auto; 
+    width: 400px;
+}
+
+.compact-form input,
+.compact-form textarea {
+    width: 90%; /* Full width for inputs */
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-card {
+    margin-bottom: 40px; /* Adjust the value as needed for spacing */
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+}
+
+.contact-item {
+    background-color: #e7f3fe;
+    border: 1px solid #6a8bb3;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.smaller-modal {
+    max-width: 400px;
+} 
+
+/* Responsive Mobile View */
+@media (max-width: 768px) {
+
+    /* Navigation Bar */
+    .nav-links {
+        flex-direction: column;
+        display: none; /* Hidden by default on mobile */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #007BFF;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    /* Card Section */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Adjust card width for mobile view */
+    }
+
+    /* Form Adjustments */
+    .form-card {
+        max-width: 90%;
+    }
+
+    /* Make the content take the full width */
+    input, select, textarea, button {
+        width: 100%;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* Tutorials Section */
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+#tutorials {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: lightgrey;
+
+    
+}
+
+/* Optional: style for video container */
+.video-container {
+    margin-top: 20px;
+}
+
+/* Optional: style for headings */
+ h3,p {
+    margin: 0 0 10px;
+    color: navy;
+}
+h2{
+    color: black;
+}

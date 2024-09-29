@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <span class="toggle" onclick="toggleMenu()">&#9776;</span>
+        <div class="nav-links" id="navLinks">
+            <a href="#" class="nav-link active" onclick="changeColor(this)">Home</a>
+            <a href="#about" class="nav-link" onclick="changeColor(this)">About</a>
+            <a href="#contact" class="nav-link" onclick="changeColor(this)">Contact</a>
+            <a href="#tutorials" class="nav-link" onclick="changeColor(this)">Tutorials</a>
+            <button id="loginBtn" class="login-btn" onclick="openLoginModal()">Login</button>
+        </div>
+    </nav>
+
+    <!-- Card Section -->
+    <section class="cards" id="home">
+        <div class="card">
+            <h3>Track Your Wardrobe</h3>
+            <img src="download 5.jpeg" alt="Track Your Wardrobe">
+            <p class="hidden-content">Keep track of your clothing items to avoid over-purchasing and maintain an organized wardrobe.</p>
+            <button onclick="toggleContent(this)">More</button>
+        </div>
+        <div class="card">
+            <h3>Plan Outfits Easily</h3>
+            <img src="download 7.jpeg" alt="Plan Outfits Easily">
+            <p class="hidden-content">Choose and plan outfits for different occasions using your current wardrobe, reducing decision fatigue.</p>
+            <button onclick="toggleContent(this)">More</button>
+        </div>
+        <div class="card">
+            <h3>Reduce Overconsumption</h3>
+            <img src="image3.jpeg" alt="Reduce Overconsumption">
+            <p class="hidden-content">Be conscious about buying new clothes and reduce your carbon footprint by making smarter wardrobe decisions.</p>
+            <button onclick="toggleContent(this)">More</button>
+        </div>
+        <div class="card">
+            <h3>Make Sustainable Choices</h3>
+            <img src="image4.jpeg" alt="Make Sustainable Choices">
+            <p class="hidden-content">Support sustainable clothing brands, buy second-hand clothes, and practice recycling or donating unused items.</p>
+            <button onclick="toggleContent(this)">More</button>
+        </div>
+    </section>
+
+    <!-- About Section with Community Exchange Form -->
+    <section id="about">
+        <h2>About</h2>
+        
+
+        <!-- Community Exchange Form in a Card -->
+        <div class="card form-card compact-form">
+            <h3>Community Exchange Form</h3>
+            <form id="exchangeForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="type">Exchange or Rent:</label>
+                <select id="type" required>
+                    <option value="exchange">Exchange Clothes</option>
+                    <option value="rent">Rent Clothes</option>
+                </select>
+
+                <label for="details">Details:</label>
+                <textarea id="details" rows="2" placeholder="Describe the clothes you're exchanging or renting"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Donation Form in a Card -->
+        <div class="card form-card compact-form">
+            <h3>Donating Registration</h3>
+            <form id="donationForm">
+                <label for="donorName">Name:</label>
+                <input type="text" id="donorName" required>
+                
+                <label for="donorEmail">Email:</label>
+                <input type="email" id="donorEmail" required>
+                
+                <label for="donorAddress">Address:</label>
+                <input type="text" id="donorAddress" required>
+                
+                <button type="submit">Register Donation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <h3>Get in touch with these organizations for donations, volunteering, or more information:</h3>
+      
+        <div class="contact-list">
+          <div class="contact-item">
+            <h3>Bangalore Oniyavara Seva Coota (BOSCO)</h3>
+            <p><strong>Location:</strong> Chamrajpet, Bangalore</p>
+            <p><strong>Contact Number:</strong> +91-80-26708112 / +91-80-26708113</p>
+            <p><strong>Website:</strong> <a href="http://www.boscoban.org" target="_blank">www.boscoban.org</a></p>
+          </div>
+      
+          <div class="contact-item">
+            <h3>Sri Sai Krupa Charitable Trust</h3>
+            <p><strong>Location:</strong> Jayanagar, Bangalore</p>
+            <p><strong>Contact Number:</strong> +91-9845212737</p>
+            <p><strong>Website:</strong> <a href="http://www.sskrupacharitabletrust.org" target="_blank">www.sskrupacharitabletrust.org</a></p>
+          </div>
+      
+          <div class="contact-item">
+            <h3>Vathsalya Charitable Trust</h3>
+            <p><strong>Location:</strong> Mahalakshmi Layout, Bangalore</p>
+            <p><strong>Contact Number:</strong> +91-80-23491531 / +91-80-23491641</p>
+            <p><strong>Website:</strong> <a href="http://www.vctblr.org" target="_blank">www.vctblr.org</a></p>
+          </div>
+      
+          <div class="contact-item">
+            <h3>New Ark Mission of India (Home of Hope)</h3>
+            <p><strong>Location:</strong> Doddagubbi Post, Bangalore</p>
+            <p><strong>Contact Number:</strong> +91-80-28465666 / +91-9880304642</p>
+            <p><strong>Website:</strong> <a href="http://www.newarkmission.org" target="_blank">www.newarkmission.org</a></p>
+          </div>
+      
+          <div class="contact-item">
+            <h3>Sneha Care Home</h3>
+            <p><strong>Location:</strong> Kanakapura Road, Bangalore</p>
+            <p><strong>Contact Number:</strong> +91-80-28432610</p>
+            <p><strong>Website:</strong> <a href="http://www.snehacarehome.org" target="_blank">www.snehacarehome.org</a></p>
+          </div>
+      
+          <div class="contact-item">
+            <h3>Ashraya</h3>
+            <p><strong>Location:</strong> Indiranagar, Bangalore</p>
+            <p><strong>Contact Number:</strong> +91-80-25251929 / +91-80-25298686</p>
+            <p><strong>Website:</strong> <a href="http://www.ashraya.net" target="_blank">www.ashraya.net</a></p>
+          </div>
+      
+          <div class="contact-item">
+            <h3>Shishu Mandir</h3>
+            <p><strong>Location:</strong> KR Puram, Bangalore</p>
+            <p><strong>Contact Number:</strong> +91-80-25613522</p>
+            <p><strong>Website:</strong> <a href="http://www.shishumandir.org" target="_blank">www.shishumandir.org</a></p>
+          </div>
+        </div>
+      </section> 
+
+
+    <!-- Tutorials Section -->
+    <section id="tutorials">
+        <h2>Tutorials</h2>
+        <p>Watch our tutorials on </p>
+        <div>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/A5DQhbrKoB8?si=qqKlTZiOPrsPv2en" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3> WHAT IS SUSTAINABLE FASHION</h3>
+
+        </div>
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/6AEr0tpTAMs?si=dFRpOOoi1x2G6YeV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+        
+            <h3>FAST FASHION ENVIRONMENT IMPACT</h3>
+        </div>
+        <div>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/8nNMHz4H_P4?si=25bifGlbLPH38zan" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3> SUSTAINABLE CLOTHING BRAND</h3>
+        </div>
+        <div>
+            <iframe width="400" height="315" src="https://www.youtube.com/embed/IEd5HO9WcL8?si=w6DwjgprXtyYI0GX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3> WHY SUSTAINABLE FASHION MATTERS?</h3>
+        </div>
+
+        </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content smaller-modal">
+            <span id="closeBtn" class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
